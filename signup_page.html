@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>SignUp</title>
+</head>
+<body>
+    <div class="container" id="myForm">
+        <section>
+        <h1>SignUp Form</h1>
+        <h3>Pleasse fill the correct details</h3>
+        </section><br><br>
+        <article>
+          <font size="5" family="comic sans ms">Name</font><br>
+          <input type="text" name="Name" id="name" placeholder="Name"><br>
+          <font size="5" family="comic sans ms">Email</font><br>
+          <input type="email" name="Name" id="email" placeholder="Email"><br>
+          <font size="5" family="comic sans ms">Password</font><br>
+          <input type="password" Name="Email" id="password" placeholder="Password"><br>
+          <center><button type="submit" id="register">Register</button><br>
+          <font size="3" family="comic sans ms">Already have an account?<span><a href="login_page.html">Login</a></span></font></center><br>
+        </article>
+    </div>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCT_f8vray1HVAXRimlHYKnVBRLs6WlNhM",
+          authDomain: "wildlife-881e7.firebaseapp.com",
+          projectId: "wildlife-881e7",
+          storageBucket: "wildlife-881e7.appspot.com",
+          messagingSenderId: "644438664985",
+          appId: "1:644438664985:web:1c8908893ddaddbda54788",
+          measurementId: "G-02ZQ3XGKRL"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
+        console.log(app);
+
+         //----- New Registration code start	  
+	  document.getElementById("register").addEventListener("click", function() {
+        var email =  document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        //For new registration
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log(user);
+          alert("Registration successfully!!");
+          // ...
+          setTimeout(function(){
+            window.location.replace("index.html")
+        }, 1000);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // ..
+          console.log(errorMessage);
+          alert(error);
+        });		  		  
+    });
+    //----- End
+    
+    
+    </script>
+       
+</body>
+</html>

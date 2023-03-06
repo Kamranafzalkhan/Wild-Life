@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/Portfolio/portfolio.css">
+    <script src="https://kit.fontawesome.com/65bec011cb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="/Portfolio/logo_1.jpg" class="logo">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <!-- <li><a href="/Portfolio/about_me.html">About</a></li> -->
+                    <li><a href="/Contact_form.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Devloper's</p>
+                <h1>Hi, I am <span>Kamran Afzal Khan</span></h1>
+            </div>
+            <!-- <div class="header-img">
+                <img src="/Portfolio/KAMRAN.png" class="logo">
+            </div> -->
+        </div>
+    </div>
+
+    <!------- About -------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/Portfolio/about_me.jpg" alt="about me">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-tittle">About me</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis in atque rem libero natus
+                        illum eos magni dicta corrupti nulla dolores aut quisquam, similique vero enim a maxime illo ex?
+                    </p>
+                    <div class="tab-tittles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <!-- skills -->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Devlopment</span><br> web app Devlopment</li>
+                            <li><span>App Devlopment</span><br> Building Android apps</li>
+                            <li><span>UI/UX</span><br>Designing web/app interfaces</li>
+                        </ul>
+                    </div>
+                    <!-- education -->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020</span><br>10 from KV AFS Bareilly.</li>
+                            <li><span>2022</span><br>12 from KV AFS Bareilly.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-tittle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Designing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi alias enim rerum perferendis,
+                        temporibus obcaecati velit architecto modi. Dolores vitae nam laudantium non hic exercitationem
+                        explicabo quis pariatur obcaecati sapiente?
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi alias enim rerum perferendis,
+                        temporibus obcaecati velit architecto modi. Dolores vitae nam laudantium non hic exercitationem
+                        explicabo quis pariatur obcaecati sapiente?
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi alias enim rerum perferendis,
+                        temporibus obcaecati velit architecto modi. Dolores vitae nam laudantium non hic exercitationem
+                        explicabo quis pariatur obcaecati sapiente?
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- -----Projects---------- -->
+
+    <div class="portfolio">
+        <div class="container">
+            <h1 class="sub-tittle">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="/Portfolio/S3.jpeg"alt='Sian'>
+                    <div class="layer">
+                        <h2>Sign Detection App</h2>
+                        <p>Our App "SIAN" converts
+                            the user input ASL sign 
+                            language into the
+                            written format .
+                            <br><b>Under construction</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/Portfolio/S2.jpeg"alt='Sian'>
+                    <div class="layer">
+                        <h2>Sign Detection App</h2>
+                        <p>Our App "SIAN" converts
+                            the user input ASL sign 
+                            language into the
+                            written format .
+                            <br>Under construction
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/Portfolio/S1.jpeg"alt='Sian'>
+                    <div class="layer">
+                        <h2>Sign Detection App</h2>
+                        <p>Our App "SIAN" converts
+                            the user input ASL sign 
+                            language into the
+                            written format .
+                            <br><b>Under construction</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- --------Contact me ------------>
+
+    <!-- footer -->
+
+    <footer>
+    <center style="color: rgb(128, 123, 117);">All copyright &copy; are reserved by Kamran Afzal Khan</center>
+    </footer>
+
+
+
+
+    <!-- -----------Javascript for showing active link in skills ad education ------------->
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+
+</html>

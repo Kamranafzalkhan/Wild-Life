@@ -1,0 +1,64 @@
+*{
+    box-sizing:border-box;
+    font-family: cursive;
+    font-weight: bold;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+  }
+
+section{
+    background-color: purple;
+    width: 100%;
+    padding: 5px;
+    padding-left: 60px;
+    
+}
+
+.container{
+    border: 1px solid black;
+    border-radius: 2px;    
+    height:auto;
+    margin:auto;
+    width:30%;
+    margin-top: 100px;
+}
+article{
+    padding-left: 60px;
+}
+
+input[type="text"],
+input[type="email"],input[type="password"],textarea{
+    width:90%;
+    padding: 12px;
+    border: 1px solid grey;
+    border-radius:5px;
+    resize:vertical;
+    margin-top: 6px ;
+    margin-bottom: 6px;
+    margin-left: 30 px;
+}
+button{
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: -50px;
+    font-size: 15px;
+    background-color: purple;
+    color: white;
+
+}
+button:hover{
+    background-color:#a262b6;
+    color: black;
+}
+
+span{
+    color: purple;
+    text-decoration: underline;
+}

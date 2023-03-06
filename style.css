@@ -1,0 +1,26 @@
+.image{
+    height: 222.66px;
+    width: 360px;
+}
+
+.card:hover{
+    box-shadow: 0px 25px 40px purple;
+    z-index: 1;
+    transform: scale(1.05);
+
+} 
+p{
+    color: aliceblue;
+}
+.btn-group:hover
+{
+    box-shadow: 5px 3px 3px rgb(0, 139, 182);
+    z-index: 1;
+    transform: scale(1.00);
+
+}
+.right{
+    padding-left: 100px;
+}
+
+
